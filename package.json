@@ -1,0 +1,18 @@
+{
+  "name": "sse-sample",
+  "version": "1.0.0",
+  "description": "Server-Side Event Sample App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "daniel_coto@live.com",
+  "license": "MIT",
+  "dependencies": {
+    "event-source-polyfill": "^1.0.3",
+    "express": "^4.16.3",
+    "promise-polyfill": "^8.1.0",
+    "whatwg-fetch": "^2.0.4"
+  }
+}

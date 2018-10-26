@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>Do you like Server Side Events?</h1>
+    <button type="button" id="yes" onclick="vote(true)">Yes</button>
+    <button type="button" id="no" onclick="vote(false)">No</button>
+    <button type="button" id="close" onclick="closeStream()">Close Stream</button>
+    <div id="votes"></div>
+    <span>Status:<span id="status"></span>
+ </span>
+ <script type="text/javascript" src="promise.js"></script> 
+ <script type="text/javascript" src="eventsource.js"></script>
+ <script type="text/javascript" src="fetch.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
