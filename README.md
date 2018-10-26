@@ -1,8 +1,9 @@
 # Server Sent Events
 
-
-# TODO
-How to update the connection status when closing the stream???
+## Running locally
+* npm install
+* npm start
+* navigate to http://localhost:3000 on your browser
 
 ## IE Notes
 

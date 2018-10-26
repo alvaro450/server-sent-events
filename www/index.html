@@ -1,17 +1,50 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Server Sent Events (Including IE)</title>
+</head>
+
 <body>
-    <h1>Do you like Server Side Events?</h1>
-    <button type="button" id="yes" onclick="vote(true)">Yes</button>
-    <button type="button" id="no" onclick="vote(false)">No</button>
-    <button type="button" id="close" onclick="closeStream()">Close Stream</button>
-    <div id="votes"></div>
-    <span>Status:<span id="status"></span>
- </span>
- <script type="text/javascript" src="promise.js"></script> 
- <script type="text/javascript" src="eventsource.js"></script>
- <script type="text/javascript" src="fetch.js"></script>
+
+    <span style="float: right;">
+        <span style="font-weight: bold;">Status:</span><span id="status"></span>
+    </span>
+    <section>
+        <h1>Do you like Server sent events?</h1>
+        <button type="button" id="yes" onclick="vote(true)">Yes</button>
+        <button type="button" id="no" onclick="vote(false)">No</button>
+        <div id="votes"></div>
+    </section>
+    <hr />
+    <section>
+        <h2> Connection </h2>
+        <button type="button" id="close" onclick="closeStream()">Terminate</button>
+        <button type="button" id="connectButton" onclick="reEstablishConnection()" disabled>Connect</button>
+    </section>
+    <hr />
+    <section>
+        <h2>Multiline Messages</h2>
+        <textarea id="messageTextArea" rows="5" col="300"></textarea>
+        <button type="button" id="multimessage" onclick="multimessage()">Send Multiline message</button>
+        <ul id="multimessagelist"> </ul>
+    </section>
+    <hr />
+    <section>
+        <h2>Event + data</h2>
+        <input type="text" id="eventTextArea" />
+        <button type="button" id="eventButton" onclick="sendEvent()">Send Event with Data</button>
+        <ul id="eventList"> </ul>
+    </section>
+
+
+    <script type="text/javascript" src="vendor/promise.js"></script>
+    <script type="text/javascript" src="vendor/eventsource.js"></script>
+    <script type="text/javascript" src="vendor/fetch.js"></script>
     <script type="text/javascript" src="index.js"></script>
 </body>
+
 </html>

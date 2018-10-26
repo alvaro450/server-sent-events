@@ -4,7 +4,7 @@
   "description": "Server-Side Event Sample App",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --inspect-brk index.js",
     "start": "node index.js"
   },
   "author": "daniel_coto@live.com",
